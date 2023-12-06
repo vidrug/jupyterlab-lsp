@@ -1,0 +1,12 @@
+version: '3'
+services:
+  jupyterlab:
+    container_name: jupyterlab-lsp
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8888:8888"
+    volumes:
+      - C:\Users\anton\git\jupyterlab\:/jupyter-lab
+      - C:\Users\anton\git\jupyterlab\conf\:/root/.jupyter/lab/
